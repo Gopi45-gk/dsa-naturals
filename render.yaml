@@ -1,10 +1,10 @@
 services:
   - type: web
     name: dsa-naturals
-    env: static
+    runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: ./dist
     routes:
       - type: rewrite
-        source: /*
+        path: /*
         destination: /index.html
